@@ -3,6 +3,7 @@
 :root {
   --color-mainblue: #2B7BB2;
   --color-cta-normal: #00A95F;
+  --color-border: #A5A5A5;
 }
 
 body {
@@ -147,7 +148,7 @@ body {
 #schedule .container {
     display: flex;
     align-items: flex-start;
-    gap: 64px;
+    gap: 120px;
 }
 
 #schedule .news-block,
@@ -170,19 +171,20 @@ body {
 .news-item {
     display: flex;
     align-items: baseline;
-    gap: 16px;
+    gap: 80px;
     padding: 16px 0;
-    border-bottom: 1px dotted #CCCCCC;
+    border-bottom: 1px dotted var(--color-border);
 }
+
+
 
 .news-date {
     flex-shrink: 0;
-    font-size: 14px;
-    color: #999999;
+    font-size: 16px;
 }
 
 .news-text {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .news-more-button {
@@ -193,7 +195,7 @@ body {
     border-radius: 30px;
     background-color: #FFFFFF;
     color: var(--color-mainblue);
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
 
 }
@@ -202,8 +204,8 @@ body {
 .schedule-table {
     display: grid;
     grid-template-columns: 180px repeat(7, 1fr);
-    border-top: 1px solid #DDDDDD;
-    border-left: 1px solid #DDDDDD;
+    border-top: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
 }
 
 .schedule-cell {
@@ -211,8 +213,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 64px;
-    border-right: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     font-size: 16px;
 }
 
@@ -240,7 +242,7 @@ body {
 
 .schedule-note {
     margin-top: 16px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     color: var(--color-mainblue);
 }
@@ -255,7 +257,7 @@ body {
 .concept-block {
     display: flex;
     justify-content: center;
-    gap: 64px;
+    gap: 80px;
     margin: 48px 0 auto;
     align-items: center;
 }
@@ -268,4 +270,7 @@ body {
 .concept-block p {
     margin: 16px 0;
     text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1.1;
+    margin: 32px 0;
 }
