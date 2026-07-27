@@ -1,0 +1,165 @@
+/* 共通 */
+
+:root {
+  --color-mainblue: #2B7BB2;
+  --color-cta-normal: #00A95F;
+}
+
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+.container {
+    width: min(1280px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--color-mainblue);
+    text-align: center;
+    margin: 64px 0;
+}
+
+
+
+/* ヘッダ */
+
+#header-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    /* padding: 0 80px; */
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: 0 80px;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.header-logo {
+    width: 190px;
+    height: 52px;
+}
+
+#header-navigation ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+#header-navigation li {
+    font-size: clamp(16px, 1.4vw, 20px);
+}
+
+#header-navigation a {
+    text-decoration: none;
+    color: var(--color-mainblue);
+}
+
+.header-contact {
+    display: flex;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-items: center;   
+    gap: 24px;
+
+}
+
+.tel-title {
+    font-size: 16px;
+    color: var(--color-mainblue);
+}
+
+.tel-num {
+    font-size: 24px;
+    color: var(--color-mainblue); 
+}
+
+.cta-button{
+    background-color: var(--color-cta-normal);
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+
+/* First view */
+#fv {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#fv picture {
+    display: block;
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+}
+
+.fv-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+}
+
+.fv-copy {
+    position: absolute;
+    bottom: 100px;
+    left: 150px;
+    font-weight: 500;
+    color: var(--color-mainblue);
+    text-shadow: 0 0 10px rgb(255,255,255);
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+}
+
+.fv-message-sub {
+    font-size: clamp(28px, 3vw, 48px);
+}
+
+.fv-message-main {
+    font-size: clamp(42px, 5vw, 72px);
+}
+
+/* コンセプト */
+#concept h4{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.concept-block {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin: 48px 0 auto;
+    align-items: center;
+}
+
+.concept-block img {
+    width: 450px;
+    height: 300px;
+}
+
+.concept-block p {
+    margin: 16px 0;
+    text-align: center;
+}
