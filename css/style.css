@@ -139,6 +139,112 @@ body {
     font-size: clamp(42px, 5vw, 72px);
 }
 
+/* 診療時間とお知らせ */
+#schedule {
+    padding: 64px 0;
+}
+
+#schedule .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 64px;
+}
+
+#schedule .news-block,
+#schedule .schedule-block {
+    flex: 1 1 0;
+}
+
+#schedule .section-title {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 24px;
+}
+
+/* お知らせ */
+.news-list {
+    list-style: none;
+}
+
+.news-item {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.news-date {
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #999999;
+}
+
+.news-text {
+    font-size: 14px;
+}
+
+.news-more-button {
+    display: block;
+    margin: 32px 0 0 auto;
+    padding: 10px 24px;
+    border: 1px solid var(--color-mainblue);
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    color: var(--color-mainblue);
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+/* 診療時間 */
+.schedule-table {
+    display: grid;
+    grid-template-columns: 180px repeat(7, 1fr);
+    border-top: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+}
+
+.schedule-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 16px;
+}
+
+.schedule-corner,
+.schedule-day {
+    background-color: #F5F8FA;
+    font-weight: 500;
+}
+
+.schedule-time {
+    justify-content: flex-start;
+    padding-left: 24px;
+    font-weight: 500;
+}
+
+.schedule-mark {
+    font-size: 20px;
+    color: var(--color-mainblue);
+}
+
+.schedule-closed {
+    font-size: 16px;
+    color: #999999;
+}
+
+.schedule-note {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-mainblue);
+}
+
 /* コンセプト */
 #concept h4{
     font-size: 20px;
