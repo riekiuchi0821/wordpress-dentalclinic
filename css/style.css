@@ -27,20 +27,18 @@ body {
     margin-bottom: 64px; 
 }
 
-.detail-button {
+.primary-button {
     display: block;
-    padding: 10px 24px;
+    padding: 16px 32px;
     text-align: center;
     font-size: 16px;
     border-radius: 30px;
     border: 1px solid var(--color-mainblue);
     background-color: #FFFFFF;
     color: var(--color-mainblue);
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
 }
-
-
 
 /* ヘッダ */
 
@@ -108,7 +106,7 @@ body {
 .cta-button{
     background-color: var(--color-cta-normal);
     border: none;
-    padding: 10px 24px;
+    padding: 16px 32px;
     border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
@@ -348,4 +346,87 @@ body {
 .concept-button {
     display: flex;
     justify-content: center;
+}
+
+/* 診療内容 */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 80px;
+}
+
+.service-card {
+    border: 2px solid var(--color-mainblue);
+    border-radius: 10px;   
+    padding: 16px;
+}
+
+.service-card-contents {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.service-img {
+    position: relative;
+    width: 160px;
+    aspect-ratio: 1/1 ;    
+    border: 2px solid var(--color-mainblue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.service-img img {
+    display: block;
+    width: 90%;
+    aspect-ratio: 1/1 ;
+    object-fit: cover;
+}
+
+.service-img::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    background-color: #D5F7FF;
+}
+    
+.service-list {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 24px;
+    padding-bottom: 16px;
+}
+
+.service-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.35em;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-mainblue);
+}
+
+.service-button {
+    display: flex;
+    justify-content: flex-end;
 }
