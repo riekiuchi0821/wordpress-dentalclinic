@@ -104,13 +104,14 @@ body {
 }
 
 .cta-button{
+    display: inline-block;
     background-color: var(--color-cta-normal);
     border: none;
-    padding: 16px 32px;
-    border-radius: 30px;
+    padding: 16px 40px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 500;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
 }
@@ -223,14 +224,13 @@ body {
     cursor: pointer;
 }
 
-
-
 /* 診療時間 */
 .schedule-table {
     display: grid;
     grid-template-columns: 180px repeat(7, 1fr);
     border-top: 1px solid var(--color-border);
     border-left: 1px solid var(--color-border);
+     background-color: #F5F8FA;   
 }
 
 .schedule-cell {
@@ -245,7 +245,6 @@ body {
 
 .schedule-corner,
 .schedule-day {
-    background-color: #F5F8FA;
     font-weight: 500;
 }
 
@@ -429,4 +428,70 @@ body {
 .service-button {
     display: flex;
     justify-content: flex-end;
+}
+
+/* フッター */
+.footer {
+    background-color: var(--color-mainblue);
+    padding: 48px 0;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+
+.footer-contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer address{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.footer-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-contents,
+.footer .schedule-block {
+    flex: 1;
+}
+
+.footer-map {
+    margin-bottom: 56px;
+}
+
+.footer iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+}
+
+.footer small,
+.footer h2,
+.footer p
+{
+    color: #FFFFFF;
+}
+
+.footer h2 {
+    font-size: 20px;
+    margin: 16px 0;
 }
