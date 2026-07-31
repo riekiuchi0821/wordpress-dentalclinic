@@ -4,6 +4,7 @@
   --color-mainblue: #2B7BB2;
   --color-cta-normal: #00A95F;
   --color-border: #A5A5A5;
+  --header-height:110px;
 }
 
 body {
@@ -51,8 +52,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 110px;
-    /* padding: 0 80px; */
+    height: var(--header-height);
     background-color: rgb(255, 255, 255, 0.8);
     padding: 0 80px;
 }
@@ -115,6 +115,39 @@ body {
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
 }
+
+#hamburger-button {
+    display: none;
+}
+
+/* SPメニュー */
+#sp-navigation {
+    position: fixed;
+    top: var(--header-height);
+    left: 0px;
+    width: 100%;
+    background-color: #BBECEE;
+    /* TODO:リファクタ */
+    transform: translateY(calc(-100% - var(--header-height)));
+    transition: transform .3s ease;
+}
+
+#sp-navigation.is-opened {
+    transform: translateY(0);
+}
+
+#sp-navigation ul {
+    padding-top: 40px;
+
+}
+
+#sp-navigation li {
+    text-align: center;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--color-mainblue);    
+}
+
+
 
 /* First view */
 #fv {
@@ -494,4 +527,57 @@ body {
 .footer h2 {
     font-size: 20px;
     margin: 16px 0;
+}
+
+@media (max-width: 1050px) {
+    /* ヘッダ */
+    #header-area {
+        padding: 0 40px;
+    }
+
+    #header-navigation {
+        display: none;
+    }
+
+    .header-contact {
+        display: none;
+    }
+
+    .header-logo {
+        width: 240px;
+        height: auto;
+    }
+
+    #hamburger-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--color-mainblue);
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    #hamburger-button span {
+        width: 48px;
+        height: 5px;
+        background-color: var(--color-mainblue);;
+        transition: 0.3s;
+    }
+
+    #hamburger-button.is-opened span:nth-of-type(1){
+        transform: translateY(15px) rotate(45deg);
+    }
+
+    #hamburger-button.is-opened span:nth-of-type(2){
+        opacity: 0;
+    }
+
+    #hamburger-button.is-opened span:nth-of-type(3){
+        transform: translateY(-15px) rotate(-45deg);
+    }
+
+
 }
