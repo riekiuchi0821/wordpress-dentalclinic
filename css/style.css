@@ -41,6 +41,10 @@ body {
   cursor: pointer;
 }
 
+.sp {
+  display: none;
+}
+
 /* ヘッダ */
 
 #header-area {
@@ -533,6 +537,10 @@ body {
     width: calc(100% - 80px);
   }
 
+  .sp {
+    display: block;
+  }
+
   /* ヘッダ */
   #header-area {
     padding: 0 40px;
@@ -643,20 +651,21 @@ body {
   }
 
   /* コンセプト */
-  /* TODO:仮置き */
+  .concept-contents {
+    margin-bottom: 36px;
+  }
 
   .concept-explanation {
     flex-direction: column;
   }
 
+  .concept-explanation img{
+    display: none;
+  }
+
   .concept-pointcards {
     flex-wrap: wrap;
     gap: 40px;
-  }
-
-  .concept-explanation img {
-    width: 200px;
-    height: 200px;
   }
 
   .service-cards {
@@ -683,13 +692,14 @@ body {
   /* ヘッダ */
 
   #header-area {
-   padding: 0 20px;
+    padding: 0 20px;
   }
 
   .header-logo {
     width: 160px;
   }
 
+  /* お知らせ・診療時間 */
   .news-block {
     width: 100%;
   }
@@ -704,5 +714,17 @@ body {
 
   .schedule-cell {
     font-size: 14px;
+  }
+
+  /* コンセプト */
+
+  .concept-contents h3{
+    margin-bottom: 24px;
+  }
+
+  .concept-explanation p {
+    font-size: 14px;
+    letter-spacing: 0.09em;
+    margin: 20px 0;
   }
 }
