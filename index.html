@@ -65,6 +65,7 @@
             <li><a href="index.html#blog">お知らせ</a></li>
           </ul>
         </nav>
+
     </header>
     <!-- ヘッダーここまで-->
 
@@ -72,6 +73,10 @@
       <!-- First View -->
       <section id="fv">
         <picture>
+          <!-- 800px以下：SP用 -->
+          <source media="(max-width: 800px)" srcset="img/hero-1-sp.png" />           
+          <!-- 1000px以下：tablet用 -->
+          <source media="(max-width: 1050px)" srcset="img/hero-1-tab.png" />
           <img
             class="fv-image"
             src="img/hero-1.png"
@@ -80,7 +85,7 @@
         </picture>
         <div class="fv-copy">
           <h1 class="fv-message-main">
-            <!-- TODO:後ろに白透過背景をつける -->
+            <!-- TODO：デザイン微調整 -->
             <span class="fv-message-sub">安心して通える</span>
             <span class="fv-message-title">家族みんなの歯科医院</span>
           </h1>

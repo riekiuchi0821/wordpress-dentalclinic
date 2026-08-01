@@ -1,583 +1,614 @@
 /* 共通 */
 
 :root {
-  --color-mainblue: #2B7BB2;
-  --color-cta-normal: #00A95F;
-  --color-border: #A5A5A5;
-  --header-height:110px;
+  --color-mainblue: #2b7bb2;
+  --color-cta-normal: #00a95f;
+  --color-border: #a5a5a5;
+  --header-height: 110px;
 }
 
 body {
-    font-family: "Zen Kaku Gothic New", sans-serif;
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 .container {
-    width: min(1280px, calc(100% - 80px));
-    margin: 0 auto;
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto;
 }
 
 .section {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .section-title {
-    font-size: 32px;
-    font-weight: 500;
-    color: var(--color-mainblue);
-    text-align: center;
-    margin-bottom: 64px; 
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-mainblue);
+  text-align: center;
+  margin-bottom: 64px;
 }
 
 .primary-button {
-    display: block;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 30px;
-    border: 1px solid var(--color-mainblue);
-    background-color: #FFFFFF;
-    color: var(--color-mainblue);
-    font-size: 20px;
-    cursor: pointer;
+  display: block;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid var(--color-mainblue);
+  background-color: #ffffff;
+  color: var(--color-mainblue);
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* ヘッダ */
 
 #header-area {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: var(--header-height);
-    background-color: rgb(255, 255, 255, 0.8);
-    padding: 0 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--header-height);
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 0 80px;
 }
 
 .header-menu {
-    display: flex;
-    align-items: center;
-    gap: 48px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
 }
 
 .header-logo {
-    width: 190px;
-    height: 52px;
-    flex-shrink: 0;
+  width: 190px;
+  height: 52px;
+  flex-shrink: 0;
 }
 
 #header-navigation ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
+  display: flex;
+  gap: 40px;
+  list-style: none;
 }
 
 #header-navigation li {
-    font-size: clamp(16px, 1.4vw, 20px);
+  font-size: clamp(16px, 1.4vw, 20px);
 }
 
 #header-navigation a {
-    text-decoration: none;
-    color: var(--color-mainblue);
+  text-decoration: none;
+  color: var(--color-mainblue);
 }
 
 .header-contact {
-    display: flex;
-    white-space: nowrap;
-    flex-shrink: 0;
-    align-items: center;   
-    gap: 24px;
-
+  display: flex;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 24px;
 }
 
 .tel-title {
-    font-size: 16px;
-    color: var(--color-mainblue);
+  font-size: 16px;
+  color: var(--color-mainblue);
 }
 
 .tel-num {
-    font-size: 24px;
-    color: var(--color-mainblue); 
+  font-size: 24px;
+  color: var(--color-mainblue);
 }
 
-.cta-button{
-    display: inline-block;
-    background-color: var(--color-cta-normal);
-    border: none;
-    padding: 16px 40px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 500;
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-cta-normal);
+  border: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 #hamburger-button {
-    display: none;
+  display: none;
 }
 
 /* SPメニュー */
 #sp-navigation {
-    position: fixed;
-    top: var(--header-height);
-    left: 0px;
-    width: 100%;
-    background-color: #BBECEE;
-    /* TODO:リファクタ */
-    transform: translateY(calc(-100% - var(--header-height)));
-    transition: transform .3s ease;
+  position: fixed;
+  top: var(--header-height);
+  left: 0px;
+  width: 100%;
+  background-color: #bbecee;
+  /* TODO:リファクタ */
+  transform: translateY(calc(-100% - var(--header-height)));
+  transition: transform 0.3s ease;
 }
 
 #sp-navigation.is-opened {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 #sp-navigation ul {
-    padding-top: 40px;
-
+  padding-top: 40px;
 }
 
 #sp-navigation li {
-    text-align: center;
-    padding: 32px 0;
-    border-bottom: 1px solid var(--color-mainblue);    
+  text-align: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--color-mainblue);
 }
-
-
 
 /* First view */
 #fv {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 #fv picture {
-    display: block;
-    width: 85%;
-    height: 100%;
-    margin-left: auto;
+  display: block;
+  width: 85%;
+  height: 100%;
+  margin-left: auto;
 }
 
 .fv-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
 }
 
 .fv-copy {
-    position: absolute;
-    bottom: 100px;
-    left: 80px;
-    font-weight: 500;
-    color: var(--color-mainblue);
-    text-shadow: 0 0 10px rgb(255,255,255);
-    letter-spacing: 0.2em;
-    line-height: 1.5;
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  font-weight: 500;
+  /* color: var(--color-mainblue); */
+  letter-spacing: 0.2em;
+  line-height: 1.5;
 }
 
 .fv-message-main {
-    font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(42px, 5vw, 72px);
 }
 
 .fv-message-sub {
-    display: block;
-    font-size: clamp(28px, 3vw, 48px);
+  display: inline-block;
+  font-size: clamp(28px, 3vw, 48px);
+  background-color: rgb(255, 255, 255, 0.8);
+  margin-bottom: 32px;
 }
 
 .fv-message-title {
-    display: block;
+  display: block;
+  background-color: rgb(255, 255, 255, 0.8);
 }
 
 /* 診療時間とお知らせ */
 #schedule {
-    padding: 64px 0;
+  padding: 64px 0;
 }
 
 #schedule .container {
-    display: flex;
-    align-items: flex-start;
-    gap: 120px;
+  display: flex;
+  align-items: flex-start;
+  gap: 120px;
 }
 
 #schedule .news-block,
 #schedule .schedule-block {
-    flex: 1 1 0;
+  flex: 1 1 0;
 }
 
 #schedule .section-title {
-    font-size: 20px;
-    font-weight: 500;
-    text-align: left;
-    margin: 0 0 24px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin: 0 0 24px;
 }
 
 /* お知らせ */
 .news-list {
-    list-style: none;
-    margin-bottom: 24px;
+  list-style: none;
+  margin-bottom: 24px;
 }
 
 .news-item {
-    display: flex;
-    align-items: baseline;
-    gap: 80px;
-    padding: 16px 0;
-    border-bottom: 1px dotted var(--color-border);
+  display: flex;
+  align-items: baseline;
+  gap: 80px;
+  padding: 16px 0;
+  border-bottom: 1px dotted var(--color-border);
 }
 
 .news-date {
-    flex-shrink: 0;
-    font-size: 16px;
+  flex-shrink: 0;
+  font-size: 16px;
 }
 
 .news-text {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .news-button {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .news-more-button {
-    margin: 32px 0 0 auto;
-    padding: 10px 24px;
-    border: 1px solid var(--color-mainblue);
-    border-radius: 30px;
-    background-color: #FFFFFF;
-    color: var(--color-mainblue);
-    font-size: 16px;
-    cursor: pointer;
+  margin: 32px 0 0 auto;
+  padding: 10px 24px;
+  border: 1px solid var(--color-mainblue);
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: var(--color-mainblue);
+  font-size: 16px;
+  cursor: pointer;
 }
 
 /* 診療時間 */
 .schedule-table {
-    display: grid;
-    grid-template-columns: 180px repeat(7, 1fr);
-    border-top: 1px solid var(--color-border);
-    border-left: 1px solid var(--color-border);
-     background-color: #F5F8FA;   
+  display: grid;
+  grid-template-columns: 180px repeat(7, 1fr);
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+  background-color: #f5f8fa;
 }
 
 .schedule-cell {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 64px;
-    border-right: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 16px;
 }
 
 .schedule-corner,
 .schedule-day {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .schedule-time {
-    justify-content: flex-start;
-    padding-left: 24px;
-    font-weight: 500;
+  justify-content: flex-start;
+  padding-left: 24px;
+  font-weight: 500;
 }
 
 .schedule-mark {
-    font-size: 20px;
-    color: var(--color-mainblue);
+  font-size: 20px;
+  color: var(--color-mainblue);
 }
 
 .schedule-closed {
-    font-size: 16px;
-    color: #999999;
+  font-size: 16px;
+  color: #999999;
 }
 
 .schedule-note {
-    margin-top: 16px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--color-mainblue);
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-mainblue);
 }
 
 /* コンセプト */
 #concept {
-    background-image: url("../img/background.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .concept-contents {
-    margin-bottom: 88px;
+  margin-bottom: 88px;
 }
 
-.concept-contents h3{
-    font-size: 20px;
-    text-align: center;
-    font-weight: 500;
-    margin-bottom: 48px;
+.concept-contents h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 48px;
 }
 
-#concept .container{
-    position: relative;
+#concept .container {
+  position: relative;
 }
 
 .concept-explanation {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin: 0 auto;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .concept-explanation img {
-    width: 450px;
-    height: 300px;
+  width: 450px;
+  height: 300px;
 }
 
 .concept-explanation p {
-    text-align: center;
-    letter-spacing: 0.1em;
-    line-height: 1.1;
-    margin: 32px 0;
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  margin: 32px 0;
 }
 
 .concept-important-points h3 {
-    font-size: 24px;
-    color: var(--color-mainblue);
-    text-align: center;
-    margin-bottom: 48px;
+  font-size: 24px;
+  color: var(--color-mainblue);
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 .concept-pointcards {
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    margin-bottom: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 48px;
 }
 
 .concept-card img {
-    width: 250px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 24px;
-    border-radius: 10px;
+  width: 250px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+  border-radius: 10px;
 }
 
-.concept-card h4{
-    text-align: center;
-    font-size: 20px;
+.concept-card h4 {
+  text-align: center;
+  font-size: 20px;
 }
 
 .concept-button {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* 診療内容 */
 .service-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 80px;
 }
 
 .service-card {
-    border: 2px solid var(--color-mainblue);
-    border-radius: 10px;   
-    padding: 16px;
+  border: 2px solid var(--color-mainblue);
+  border-radius: 10px;
+  padding: 16px;
 }
 
 .service-card-contents {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 24px;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
 }
 
 .service-card h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 
 .service-img {
-    position: relative;
-    width: 160px;
-    aspect-ratio: 1/1 ;    
-    border: 2px solid var(--color-mainblue);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
+  position: relative;
+  width: 160px;
+  aspect-ratio: 1/1;
+  border: 2px solid var(--color-mainblue);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 .service-img img {
-    display: block;
-    width: 90%;
-    aspect-ratio: 1/1 ;
-    object-fit: cover;
+  display: block;
+  width: 90%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .service-img::after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    z-index: -1;
-    background-color: #D5F7FF;
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  background-color: #d5f7ff;
 }
-    
+
 .service-list {
-    list-style: none;
-    margin-bottom: 24px;
+  list-style: none;
+  margin-bottom: 24px;
 }
 
 .service-list li {
-    position: relative;
-    padding-left: 24px;
-    padding-bottom: 16px;
+  position: relative;
+  padding-left: 24px;
+  padding-bottom: 16px;
 }
 
 .service-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.35em;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--color-mainblue);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-mainblue);
 }
 
 .service-button {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* フッター */
 .footer {
-    background-color: var(--color-mainblue);
-    padding: 48px 0;
+  background-color: var(--color-mainblue);
+  padding: 48px 0;
 }
 
 .footer-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
 }
 
 .footer-contents {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer address{
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 20px;
+.footer address {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
 }
 
 .footer-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
 .footer-cta {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-contents,
 .footer .schedule-block {
-    flex: 1;
+  flex: 1;
 }
 
 .footer-map {
-    margin-bottom: 56px;
+  margin-bottom: 56px;
 }
 
 .footer iframe {
-    width: 100%;
-    height: 300px;
-    border: 0;
+  width: 100%;
+  height: 300px;
+  border: 0;
 }
 
 .footer-copyright {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer small,
 .footer h2,
-.footer p
-{
-    color: #FFFFFF;
+.footer p {
+  color: #ffffff;
 }
 
 .footer h2 {
-    font-size: 20px;
-    margin: 16px 0;
+  font-size: 20px;
+  margin: 16px 0;
 }
 
 @media (max-width: 1050px) {
-    /* ヘッダ */
-    #header-area {
-        padding: 0 40px;
-    }
+  /* ヘッダ */
+  #header-area {
+    padding: 0 40px;
+  }
 
-    #header-navigation {
-        display: none;
-    }
+  #header-navigation {
+    display: none;
+  }
 
-    .header-contact {
-        display: none;
-    }
+  .header-contact {
+    display: none;
+  }
 
-    .header-logo {
-        width: 240px;
-        height: auto;
-    }
+  .header-logo {
+    width: 240px;
+    height: auto;
+  }
 
-    #hamburger-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 10px;
-        color: var(--color-mainblue);
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        margin-right: 20px;
-    }
+  #hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--color-mainblue);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 20px;
+  }
 
-    #hamburger-button span {
-        width: 48px;
-        height: 5px;
-        background-color: var(--color-mainblue);;
-        transition: 0.3s;
-    }
+  #hamburger-button span {
+    width: 48px;
+    height: 5px;
+    background-color: var(--color-mainblue);
+    transition: 0.3s;
+  }
 
-    #hamburger-button.is-opened span:nth-of-type(1){
-        transform: translateY(15px) rotate(45deg);
-    }
+  #hamburger-button.is-opened span:nth-of-type(1) {
+    transform: translateY(15px) rotate(45deg);
+  }
 
-    #hamburger-button.is-opened span:nth-of-type(2){
-        opacity: 0;
-    }
+  #hamburger-button.is-opened span:nth-of-type(2) {
+    opacity: 0;
+  }
 
-    #hamburger-button.is-opened span:nth-of-type(3){
-        transform: translateY(-15px) rotate(-45deg);
-    }
+  #hamburger-button.is-opened span:nth-of-type(3) {
+    transform: translateY(-15px) rotate(-45deg);
+  }
 
+  /* First view */
+  #fv picture {
+    width: 100%;
+  }
+  .fv-image {
+    object-position: left center;
+  }
+
+  .fv-copy {
+    top: calc(var(--header-height) + 80px);
+    right: 100px;
+    bottom: auto;
+    left: auto;
+    writing-mode: vertical-rl;
+  }
+
+  .fv-message-main {
+    font-size: clamp(32px, 5.5vw, 48px);
+  }
+
+  .fv-message-sub {
+    display: inline-block;
+    font-size: clamp(32px, 5.5vw, 48px);
+  }
+
+  .fv-message-title {
+    margin-right: 32px;
+    margin-top: 80px;
+  }
+
+  .concept-pointcards {
+    flex-wrap: wrap;
+  }
 
 }
+
