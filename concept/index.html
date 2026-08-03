@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="中野区のさわやか歯科クリニック。小さなお子さまからご年配の方まで安心して通える歯科医院です。痛みの少ない治療、予防歯科、最新設備でお口の健康をサポートします。"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/destyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>当院の特徴</title>
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header id="header-area">
+      <div class="header-menu">
+        <!-- ロゴ -->
+        <a href="../index.html" class="header-logo">
+          <img src="../img/logo2.svg" alt="さわやか歯科医院ロゴ" />
+        </a>
+        <!-- ナビゲーション -->
+        <nav id="header-navigation">
+          <ul>
+            <li><a href="../concept/index.html">当院の特徴</a></li>
+            <li><a href="../new/index.html">はじめての方へ</a></li>
+            <li><a href="../index.html#about">診療内容</a></li>
+            <li><a href="../index.html#doctors">医師紹介</a></li>
+            <li><a href="../index.html#blog">お知らせ</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-contact">
+        <a href="#" class="cta-button">Web予約</a>
+        <div>
+          <p class="tel-title">電話予約はこちら</p>
+          <p class="tel-num">012-345-7891</p>
+        </div>
+      </div>
+
+      <button
+        id="hamburger-button"
+        type="button"
+        aria-label="メニュー"
+        aria-controls="sp-navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- SPナビゲーション -->
+      <nav id="sp-navigation">
+        <ul>
+          <!-- TODOリンク更新 -->
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="../concept/index.html">当院の特徴</a></li>
+          <li><a href="index.html#about">はじめての方へ</a></li>
+          <li><a href="index.html#about">診療内容</a></li>
+          <li><a href="index.html#doctors">医師紹介</a></li>
+          <li><a href="index.html#blog">お知らせ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ヘッダーここまで-->
+
+    <main>
+      <!-- First View -->
+      <section id="fv">
+        <picture class="fv-area">
+          <!-- 800px以下：SP用 -->
+          <source media="(max-width: 800px)" srcset="../img/appearance.png" />
+          <!-- 1000px以下：tablet用 -->
+          <source media="(max-width: 1050px)" srcset="../img/appearance.png" />
+          <img class="fv-image" src="../img/appearance.png" alt="外観" />
+        </picture>
+        <div class="fv-copy">
+          <h1 class="fv-message-main">
+            <span class="fv-message-sub">当院の特徴</span>
+          </h1>
+        </div>
+      </section>
+      <!-- First View ここまで-->
+
+      <!-- パンくず-->
+      <div class="container section">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <ol class="breadcrumb-list">
+            <li><a href="/">ホーム</a></li>
+            <li aria-current="page">当院の特徴</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- パンくずここまで-->
+
+      <!-- Concept -->
+      <section id="concept" class="section">
+        <div class="container">
+          <div class="concept-contents">
+            <h2 class="section-title">コンセプト</h2>
+            <h3>
+              地域の皆様が安心して通える、<br class="sp" />
+              家族みんなのための歯科医院
+            </h3>
+            <div class="concept-explanation">
+              <div>
+                <p>
+                  当院は、小さなお子さまからご年配の方まで、<br>どなたでも安心して通える歯科クリニックを目指しています。
+                </p>
+                <img class="concept-explanation-icon" src="../img/icon-family.png" alt="家族" />
+                <p>
+                  単に「治療をする」のではなく、患者さんの不安を和らげ、笑顔で通えることを大切にし、<br>
+                  最新の設備とやさしい診療で、家族みんなの健康な歯を守れるようサポートしていきます。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="concept-important-points">
+            <h3>当院が大切にしていること</h3>
+            <div class="concept-pointcards">
+              <div class="concept-card">
+                <img src="../img/painless.jpg" alt="子供の治療" />
+                <h4 class="card-title">痛みの少ないやさしい治療</h4>
+                <p>麻酔の工夫や最新の技術を取り入れ、痛みを最小限に抑えた治療 を心がけています。<br> 歯医者が苦手な方も、安心して通っていただけるよう配慮しています。</p>
+              </div>
+              <div class="concept-card">
+                <img src="../img/lecture.png" alt="予防歯科" />
+                <h4 class="card-title">お口の健康を守る予防歯科</h4>
+                <p>「痛くなったら行く」のではなく、むし歯や歯周病を防ぐ予防ケア を大切にしています。<br>定期検診・クリーニングで、大切な歯を一生涯守ります。</p>
+              </div>
+              <div class="concept-card">
+                <img src="../img/img3.jpg" alt="治療設備" />
+                <h4 class="card-title">清潔で最新の設備</h4>
+                <p>患者さんが安心して治療を受けられるよう、徹底した衛生管理 と 最新の歯科医療機器 を導入。<br>快適な環境で、質の高い治療を提供します。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Conceptここまで -->
+
+      <!-- 施設の紹介 -->
+      <section id="facilities" class="section">
+        <div class="container">
+            
+        </div>
+      </section>
+
+      <!-- 施設の紹介ここまで -->
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-info">
+            <!-- フッター左側 -->
+            <div class="footer-contents">
+              <div class="footer-address">
+                <div class="footer-logo">
+                  <!-- ロゴ -->
+                  <a href="index.html">
+                    <img src="../img/logo2_white.svg" alt="さわやか歯科医院ロゴ" />
+                  </a>
+                </div>
+                <address>
+                  <p>東京都中野区中野1丁目 1-1</p>
+                  <p>中央線「中野」駅　徒歩3分</p>
+                </address>
+              </div>
+              <div class="footer-cta">
+                <a href="#" class="cta-button">Web予約</a>
+              </div>
+            </div>
+            <!-- フッター左側ここまで -->
+            <!-- 診療時間 -->
+            <div class="schedule-block">
+              <h2>診療時間</h2>
+              <div class="schedule-table">
+                <div class="schedule-cell schedule-corner"></div>
+                <div class="schedule-cell schedule-day">月</div>
+                <div class="schedule-cell schedule-day">火</div>
+                <div class="schedule-cell schedule-day">水</div>
+                <div class="schedule-cell schedule-day">木</div>
+                <div class="schedule-cell schedule-day">金</div>
+                <div class="schedule-cell schedule-day">土</div>
+                <div class="schedule-cell schedule-day">日</div>
+
+                <div class="schedule-cell schedule-time">10:00-12:00</div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark schedule-closed">
+                  ／
+                </div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark schedule-closed">
+                  ／
+                </div>
+
+                <div class="schedule-cell schedule-time">14:00-18:00</div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark schedule-closed">
+                  ／
+                </div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark">●</div>
+                <div class="schedule-cell schedule-mark schedule-closed">
+                  ／
+                </div>
+                <div class="schedule-cell schedule-mark schedule-closed">
+                  ／
+                </div>
+              </div>
+              <p class="schedule-note">
+                休診：水曜、日曜、祝日<br />
+                ※土曜は午前中のみ
+              </p>
+            </div>
+            <!-- 診療時間 ここまで-->
+          </div>
+          <div class="footer-map">
+            <iframe
+              title="さわやか歯科医院 地図"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3239.833121392787!2d139.6651018!3d35.705724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f296b32f3571%3A0x568104f2ac34074e!2z5Lit6YeO6aeF!5e0!3m2!1sja!2sjp!4v1785392628953!5m2!1sja!2sjp"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+          <div class="footer-copyright">
+            <small> &copy; SAWAYAKA DENTAL CLINIC </small>
+          </div>
+        </div>
+      </footer>
+      <!-- footer ここまで-->
+    </main>
+
+    <script src="../js/top.js"></script>
+  </body>
+</html>

@@ -53,6 +53,13 @@ body {
   font-size: 16px;
 }
 
+.concept-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
 .card-title {
   text-align: center;
   font-size: 20px;
@@ -62,6 +69,21 @@ body {
 .sp {
   display: none;
 }
+
+.fv-area {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fv-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
 
 /* ヘッダ */
 
@@ -172,6 +194,105 @@ body {
   border-bottom: 1px solid var(--color-mainblue);
 }
 
+/* フッター */
+.footer {
+  background-color: var(--color-mainblue);
+  padding: 48px 0;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.footer-contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer address {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.footer-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-contents,
+.footer .schedule-block {
+  flex: 1;
+}
+
+.footer-map {
+  margin-bottom: 56px;
+}
+
+.footer iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.footer small,
+.footer h2,
+.footer p {
+  color: #ffffff;
+}
+
+.footer h2 {
+  font-size: 20px;
+  margin: 16px 0;
+}
+
+.footer-map {
+  display: none;
+}
+
+.home .footer-map {
+  display: block;
+}
+
+/* パンくず */
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-list li + li::before {
+  content: ">";
+  margin-right: .5rem;
+  color: #999;
+}
+
+.breadcrumb-list a {
+  text-decoration: underline;
+}
+
+/* ========================================
+   トップページ
+======================================== */
+
+
 /* First view */
 #fv {
   height: 100vh;
@@ -179,19 +300,9 @@ body {
   position: relative;
 }
 
-#fv picture {
-  display: block;
+.fv-area--top {
   width: 85%;
-  height: 100%;
   margin-left: auto;
-}
-
-.fv-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right center;
 }
 
 .fv-copy {
@@ -206,6 +317,7 @@ body {
 
 .fv-message-main {
   font-size: clamp(42px, 5vw, 72px);
+  letter-spacing: 0.2em;
 }
 
 .fv-message-sub {
@@ -333,12 +445,12 @@ body {
 .concept-explanation {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 80px;
   margin: 0 auto;
-  align-items: center;
 }
 
-.concept-explanation img {
+.concept-explanation-img {
   width: 450px;
   height: 300px;
 }
@@ -364,8 +476,12 @@ body {
   margin-bottom: 48px;
 }
 
+.concept-card {
+  width: 250px; 
+}
+
 .concept-card img {
-  width: 250px;
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
@@ -461,69 +577,16 @@ body {
   justify-content: flex-end;
 }
 
-/* フッター */
-.footer {
-  background-color: var(--color-mainblue);
-  padding: 48px 0;
-}
 
-.footer-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 56px;
-}
 
-.footer-contents {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer address {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 20px;
-}
-
-.footer-logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.footer-cta {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-contents,
-.footer .schedule-block {
-  flex: 1;
-}
-
-.footer-map {
-  margin-bottom: 56px;
-}
-
-.footer iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-}
-
-.footer-copyright {
-  display: flex;
-  justify-content: center;
-}
-
-.footer small,
-.footer h2,
-.footer p {
-  color: #ffffff;
-}
-
-.footer h2 {
-  font-size: 20px;
-  margin: 16px 0;
+/* ========================================
+   当院の特徴
+======================================== */
+.concept-explanation-icon {
+  display: block;
+  margin: 0 auto;
+  width: 450px;
+  aspect-ratio: 3/1;
 }
 
 @media (max-width: 1050px) {
@@ -609,7 +672,6 @@ body {
   }
 
   .fv-message-title {
-    margin-right: 32px;
     margin-top: 80px;
   }
 
