@@ -16,6 +16,11 @@ body {
   margin: 0 auto;
 }
 
+.container--sm {
+  width: min(1000px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
 .section {
   padding: 50px 0;
 }
@@ -419,6 +424,8 @@ body {
   color: var(--color-mainblue);
 }
 
+
+
 /* コンセプト */
 #concept {
   background-image: url("../img/background.png");
@@ -582,12 +589,44 @@ body {
 /* ========================================
    当院の特徴
 ======================================== */
+
+/* コンセプト */
 .concept-explanation-icon {
   display: block;
   margin: 0 auto;
   width: 450px;
   aspect-ratio: 3/1;
 }
+
+/* 施設の特徴 */
+.facilities-card {
+  display: flex;
+  gap: 72px;
+  margin-bottom: 24px;
+}
+
+.facilities-card-rev {
+  flex-direction: row-reverse;
+}
+
+.facilities-card-text {
+  padding: 24px 0;
+  flex: 1;
+}
+
+.facilities-card-img {
+  display: block;
+  width: 400px;
+  aspect-ratio: 4/3;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.facilities-card-text .card-title {
+  text-align: left;
+  margin-bottom: 56px;
+}
+
 
 @media (max-width: 1050px) {
   .container {
