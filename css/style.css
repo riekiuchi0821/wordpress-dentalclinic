@@ -89,6 +89,12 @@ body {
   object-position: right center;
 }
 
+.subpage-content {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
 
 /* ヘッダ */
 
@@ -180,7 +186,6 @@ body {
   left: 0px;
   width: 100%;
   background-color: #bbecee;
-  /* TODO:リファクタ */
   transform: translateY(calc(-100% - var(--header-height)));
   transition: transform 0.3s ease;
 }
@@ -277,7 +282,7 @@ body {
 .breadcrumb-list {
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -285,7 +290,7 @@ body {
 
 .breadcrumb-list li + li::before {
   content: ">";
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: #999;
 }
 
@@ -296,7 +301,6 @@ body {
 /* ========================================
    トップページ
 ======================================== */
-
 
 /* First view */
 #fv {
@@ -424,16 +428,7 @@ body {
   color: var(--color-mainblue);
 }
 
-
-
 /* コンセプト */
-#concept {
-  background-image: url("../img/background.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-}
-
 .concept-contents {
   margin-bottom: 88px;
 }
@@ -484,7 +479,7 @@ body {
 }
 
 .concept-card {
-  width: 250px; 
+  width: 250px;
 }
 
 .concept-card img {
@@ -495,7 +490,6 @@ body {
   margin-bottom: 24px;
   border-radius: 10px;
 }
-
 
 .concept-button {
   display: flex;
@@ -584,8 +578,6 @@ body {
   justify-content: flex-end;
 }
 
-
-
 /* ========================================
    当院の特徴
 ======================================== */
@@ -627,7 +619,6 @@ body {
   margin-bottom: 56px;
 }
 
-
 @media (max-width: 1050px) {
   .container {
     width: calc(100% - 80px);
@@ -635,6 +626,10 @@ body {
 
   .sp {
     display: block;
+  }
+
+  .subpage-content {
+    background-image: url("../img/background-sp.png");
   }
 
   /* ヘッダ */
@@ -684,6 +679,17 @@ body {
 
   #hamburger-button.is-opened span:nth-of-type(3) {
     transform: translateY(-15px) rotate(-45deg);
+  }
+
+  /* フッター */
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    display: block;
+    width: 100%;
   }
 
   /* First view */
@@ -766,20 +772,24 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  /* フッター */
-  .footer-info {
+  /* 当院の特徴 */
+  .facilities-card,
+  .facilities-card-rev {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .facilities-card-text {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  .footer-logo img {
-    display: block;
-    width: 100%;
-  }
-
 }
 
 @media (max-width: 450px) {
+  /* 共通 */  
   .container {
     width: calc(100% - 40px);
   }
@@ -811,7 +821,6 @@ body {
   }
 
   /* コンセプト */
-
   .concept-contents h3 {
     margin-bottom: 24px;
   }
@@ -820,5 +829,10 @@ body {
     font-size: 14px;
     letter-spacing: 0.09em;
     margin: 20px 0;
+  }
+
+  /* 施設の特徴 */
+  .facilities-card-img {
+    width: 250px;
   }
 }
