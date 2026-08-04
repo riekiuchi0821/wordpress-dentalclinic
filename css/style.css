@@ -658,35 +658,60 @@ body {
   border-radius: 10px;
 }
 
-.director-name-container {
+.doctors-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.name-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 32px;
   padding-bottom: 32px;
-  border-bottom: 2px dashed var(--color-mainblue);
 }
 
-.director-name {
+.doctor-card-divider {
+  border-bottom: 2px dashed var(--color-mainblue);
+  margin-bottom: 32px;
+}
+  
+.doctors-name {
   display: flex;
   flex-direction: column;
-  gap: 8px;  
+  gap: 8px; 
 }
 
-.director-name-jp {
+.doctors-name-jp {
   font-size: 32px;
-  margin-bottom: 32pz;
 }
 
-.director-profile {
-  margin-top: 32px;
-}
-
-.director-profile {
+.doctors-profile {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 24px;
   row-gap: 8px;
+}
+
+.doctors-card {
+  display: flex;
+  gap: 80px;
+}
+
+.doctors-card-img {
+  width: 250px;
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.doctors-info {
+  flex: 1;
+}
+
+.doctors-comment {
+  margin-bottom: 32px;
 }
 
 @media (max-width: 1050px) {
@@ -871,6 +896,16 @@ body {
 
   .director-name-jp {
     font-size: 24px;
+  }
+
+  .doctors-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .name-container {
+    justify-content: center;
   }
 
 }

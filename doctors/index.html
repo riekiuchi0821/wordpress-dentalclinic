@@ -80,7 +80,11 @@
           <source media="(max-width: 800px)" srcset="../img/doctors-sp.png" />
           <!-- 1000px以下：tablet用 -->
           <source media="(max-width: 1050px)" srcset="../img/doctors-sp.png" />
-          <img class="fv-image fv-image--center" src="../img/doctors.png" alt="医師たち" />
+          <img
+            class="fv-image fv-image--center"
+            src="../img/doctors.png"
+            alt="医師たち"
+          />
         </picture>
         <div class="fv-copy">
           <h1 class="fv-message-main">
@@ -104,9 +108,9 @@
         <!-- パンくずここまで-->
 
         <!-- 院長挨拶 -->
-        <section id="director" class="section-">
+        <section id="director" class="section">
           <div class="container--sm">
-            <div class="concept-contents">
+            <div>
               <h2 class="section-title">院長よりご挨拶</h2>
               <div class="director-explanation">
                 <div class="director-photo">
@@ -136,109 +140,102 @@
                 </div>
 
                 <div class="director-info">
-                  <div class="director-name-container">
+                  <div class="name-container">
                     <p>院長</p>
-                    <div class="director-name">
-                      <div class="director-name-jp">松本　貴子</div>
-                      <div class="director-name-en">TAKAKO　MATSUMOTO</div>
+                    <div class="doctors-name">
+                      <div class="doctors-name-jp">松本　貴子</div>
+                      <div>TAKAKO　MATSUMOTO</div>
                     </div>
                   </div>
-                  <div class="director-profile">
+                  <div class="doctor-card-divider"></div>
+                  <div class="doctors-profile">
                     <div>得意な治療:</div>
-                    <div>むし歯治療・予防歯科・小児歯科</div>
+                    <div>口腔外科・親知らずの抜歯・歯周病治療</div>
                     <div>趣味:</div>
-                    <div>旅行・読書・カフェ巡り</div>
+                    <div>ランニング・映画鑑賞・登山</div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="concept-important-points">
-              <h3>当院が大切にしていること</h3>
-              <div class="concept-pointcards">
-                <div class="concept-card">
-                  <img src="../img/painless.jpg" alt="子供の治療" />
-                  <h4 class="card-title">痛みの少ないやさしい治療</h4>
-                  <p>
-                    麻酔の工夫や最新の技術を取り入れ、痛みを最小限に抑えた治療
-                    を心がけています。<br />
-                    歯医者が苦手な方も、安心して通っていただけるよう配慮しています。
-                  </p>
-                </div>
-                <div class="concept-card">
-                  <img src="../img/lecture.png" alt="予防歯科" />
-                  <h4 class="card-title">お口の健康を守る予防歯科</h4>
-                  <p>
-                    「痛くなったら行く」のではなく、むし歯や歯周病を防ぐ予防ケア
-                    を大切にしています。<br />定期検診・クリーニングで、大切な歯を一生涯守ります。
-                  </p>
-                </div>
-                <div class="concept-card">
-                  <img src="../img/img3.jpg" alt="治療設備" />
-                  <h4 class="card-title">清潔で最新の設備</h4>
-                  <p>
-                    患者さんが安心して治療を受けられるよう、徹底した衛生管理 と
-                    最新の歯科医療機器 を導入。<br />快適な環境で、質の高い治療を提供します。
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
-        <!-- Conceptここまで -->
+        <!-- 院長挨拶ここまで -->
 
-        <!-- 施設の紹介 -->
-        <section id="facilities" class="section">
+        <!-- 医師紹介 -->
+        <section id="doctors" class="section">
           <div class="container--sm">
-            <h2 class="section-title">施設の特徴</h2>
-            <div class="facilities-cards">
-              <div class="facilities-card">
+            <h2 class="section-title">スタッフ紹介</h2>
+            <div class="doctors-contents">
+              <!-- 田中医師 -->
+              <div class="doctors-card">
                 <img
-                  class="facilities-card-img"
-                  src="../img/img3.jpg"
-                  alt="清潔で快適な診療室"
+                  class="doctors-card-img"
+                  src="../img/doctor1_tanaka.jpg"
+                  alt="田中医師"
                 />
-                <div class="facilities-card-text">
-                  <h3 class="card-title">清潔で快適な診療環境</h3>
-                  <p>
-                    患者さんに安心して治療を受けていただけるよう、衛生管理を徹底し、最新の滅菌システムを導入。<br />院内は明るく、清潔感のある快適な空間づくりを心がけています。
-                  </p>
+                <div class="doctors-info">
+                  <div class="name-container">
+                    <p>歯科医師</p>
+                    <div class="doctors-name">
+                      <div class="doctors-name-jp">田中　健吾</div>
+                      <div>KENGO　TANAKA</div>
+                    </div>
+                  </div>
+                  <div class="doctors-comment">
+                    <p>
+                      お口の健康は、全身の健康にも大きく関わっています。<br />
+                      患者さんが長く健康な歯を維持できるよう、最適な治療とアドバイスを提供いたします。<br />
+                      治療に対する不安や疑問があれば、何でもお気軽にご相談ください。
+                    </p>
+                  </div>
+                  <div class="doctor-card-divider"></div>
+                  <div class="doctors-profile">
+                    <div>得意な治療:</div>
+                    <div>口腔外科・親知らずの抜歯・歯周病治療</div>
+                    <div>趣味:</div>
+                    <div>ランニング・映画鑑賞・登山</div>
+                  </div>
                 </div>
               </div>
-              <div class="facilities-card facilities-card-rev">
+              <!-- 田中医師 -->
+
+              <!-- 鈴木歯科衛生士 -->
+              <div class="doctors-card">
                 <img
-                  class="facilities-card-img"
-                  src="../img/kidsspace.png"
-                  alt="キッズスペース"
+                  class="doctors-card-img"
+                  src="../img/staff1_suzuki_2.png"
+                  alt="鈴木歯科衛生士"
                 />
-                <div class="facilities-card-text">
-                  <h3 class="card-title">小さなお子さまも過ごしやすい</h3>
-                  <p>
-                    お子さまが楽しく通えるように、キッズスペースを完備。<br />キッズスペースは毎朝消毒しており、安心して過ごせます。
-                  </p>
+                <div class="doctors-info">
+                  <div class="name-container">
+                    <p>歯科衛生士</p>
+                    <div class="doctors-name">
+                      <div class="doctors-name-jp">鈴木　由佳</div>
+                      <div>YUKA　SUZUKI</div>
+                    </div>
+                  </div>
+                  <div class="doctors-comment">
+                    <p>
+                      患者さんのお口の健康を守るため、クリーニングや予防ケアを担当しています。<br />
+                      歯磨きのコツや、デンタルフロスの使い方など、日々のケアについてもお伝えしていますので、お気軽にご相談ください。
+                    </p>
+                  </div>
+                  <div class="doctor-card-divider"></div>
+                  <div class="doctors-profile">
+                    <div>得意な治療:</div>
+                    <div>クリーニング・ホワイトニング・歯磨き指導</div>
+                    <div>趣味:</div>
+                    <div>ヨガ・お菓子作り・音楽鑑賞</div>
+                  </div>
                 </div>
               </div>
-              <div class="facilities-card">
-                <img
-                  class="facilities-card-img"
-                  src="../img/img6.jpg"
-                  alt="バリアフリーな診療室"
-                />
-                <div class="facilities-card-text">
-                  <h3 class="card-title">バリアフリー設計</h3>
-                  <p>
-                    ご年配の方やお身体が不自由な方にも安心してご来院いただけるよう、段差の少ないバリアフリー設計
-                    になっています。
-                  </p>
-                </div>
-              </div>
+              <!-- 鈴木歯科衛生士 -->
             </div>
           </div>
         </section>
-
-        <!-- 施設の紹介ここまで -->
+        <!-- 医師紹介ここまで -->
       </div>
-      <!-- パンくず、コンセプト、施設の特徴　ここまで-->
+      <!-- パンくず、院長挨拶、医師紹介　ここまで-->
 
       <!-- footer -->
       <footer class="footer">
