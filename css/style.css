@@ -86,7 +86,15 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: left center;
+}
+
+.fv-image--right {
   object-position: right center;
+}
+
+.fv-image--center {
+  object-position: center center;
 }
 
 .subpage-content {
@@ -97,7 +105,6 @@ body {
 }
 
 /* ヘッダ */
-
 #header-area {
   position: fixed;
   top: 0;
@@ -622,6 +629,7 @@ body {
    医師紹介
 ======================================== */
 
+/* first view */
 .director-explanation {
   display: grid;
   grid-template-columns: 1fr 450px;
@@ -761,9 +769,6 @@ body {
   /* First view */
   #fv picture {
     width: 100%;
-  }
-  .fv-image {
-    object-position: left center;
   }
 
   .fv-copy {
