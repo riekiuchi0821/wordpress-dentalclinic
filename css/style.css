@@ -313,11 +313,6 @@ body {
   position: relative;
 }
 
-.fv-area--top {
-  width: 85%;
-  margin-left: auto;
-}
-
 .fv-copy {
   position: absolute;
   bottom: 100px;
