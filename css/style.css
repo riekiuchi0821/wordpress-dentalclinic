@@ -227,6 +227,10 @@ body {
   font-size: 20px;
 }
 
+.footer-address-note {
+  font-size: 16px; 
+}
+
 .footer-logo {
   display: flex;
   justify-content: center;
@@ -690,6 +694,10 @@ body {
   .footer-logo img {
     display: block;
     width: 100%;
+  }
+
+  .footer address {
+    font-size: 16px;
   }
 
   /* First view */
