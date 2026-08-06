@@ -40,6 +40,14 @@ body {
   margin-bottom: 40px;
 }
 
+.section-background-img {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+
 .primary-button {
   display: block;
   padding: 16px 32px;
@@ -95,13 +103,6 @@ body {
 
 .fv-image--center {
   object-position: center center;
-}
-
-.subpage-content {
-  background-image: url("../img/background.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
 }
 
 /* ヘッダ */
